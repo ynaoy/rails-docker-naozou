@@ -39,7 +39,7 @@ jobs:
       - run:
         name: Database setup
         command: bundle exec rails db:migrate
-      -run:
+      - run:
         name: test
         command: bundle exec rake test
 
