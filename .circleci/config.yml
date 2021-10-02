@@ -15,7 +15,7 @@ jobs:
       - image: circleci/ruby:2.7
     working_directory: ~/rails-docker-naozou/src
     steps:
-      - checkout
+      - checkout:
         path: ~/rails-docker-naozou
       - ruby/install-deps
   test:
@@ -33,7 +33,7 @@ jobs:
         RAILS_ENV: test
       working_directory: ~/rails-docker-naozou/src
       steps:
-        - checkout
+        - checkout:
           path: ~/rails-docker-naozou
         - ruby/install-deps
         - run:
